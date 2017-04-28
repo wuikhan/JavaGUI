@@ -1,5 +1,4 @@
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -80,6 +79,7 @@ public class orderForm {
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblFirstName = new JLabel("First Name:");
+		lblFirstName.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblFirstName.setBounds(22, 11, 70, 14);
 		frame.getContentPane().add(lblFirstName);
 		
@@ -90,6 +90,7 @@ public class orderForm {
 		txtFirstName.setColumns(10);
 		
 		JLabel lblLastName = new JLabel("Last Name:");
+		lblLastName.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblLastName.setBounds(199, 11, 70, 14);
 		frame.getContentPane().add(lblLastName);
 		
@@ -151,7 +152,7 @@ public class orderForm {
 		
 		
 		JLabel topOnion = new JLabel("");
-		topOnion.setBorder(new LineBorder(new Color(0, 0, 0)));
+		topOnion.setForeground(Color.BLUE);
 		topOnion.setBackground(Color.WHITE);
 		topOnion.setBounds(217, 195, 86, 20);
 		frame.getContentPane().add(topOnion);
@@ -168,7 +169,7 @@ public class orderForm {
 		
 		
 		JLabel topRedChiliSauce = new JLabel("");
-		topRedChiliSauce.setBorder(new LineBorder(new Color(0, 0, 0)));
+		topRedChiliSauce.setForeground(Color.BLUE);
 		topRedChiliSauce.setBackground(Color.WHITE);
 		topRedChiliSauce.setBounds(318, 195, 141, 20);
 		frame.getContentPane().add(topRedChiliSauce);
@@ -186,7 +187,7 @@ public class orderForm {
 		
 		
 		JLabel topSourCream = new JLabel("");
-		topSourCream.setBorder(new LineBorder(new Color(0, 0, 0)));
+		topSourCream.setForeground(Color.BLUE);
 		topSourCream.setBackground(Color.WHITE);
 		topSourCream.setBounds(22, 226, 86, 20);
 		frame.getContentPane().add(topSourCream);
@@ -201,7 +202,7 @@ public class orderForm {
 		});
 		chckbxSourCream.setBounds(292, 130, 97, 23);
 		frame.getContentPane().add(chckbxSourCream);
-		orderSelect.setBorder(new LineBorder(new Color(0, 0, 0)));
+		orderSelect.setForeground(Color.BLUE);
 		orderSelect.setBackground(Color.WHITE);
 		
 		orderSelect.setBounds(22, 195, 86, 20);
@@ -211,15 +212,14 @@ public class orderForm {
 		rdbtnBowl.addActionListener(listener);
 		
 		JLabel thankYou = new JLabel("");
-		thankYou.setBorder(new LineBorder(new Color(0, 0, 0)));
+		thankYou.setFont(new Font("Times New Roman", Font.ITALIC, 13));
+		thankYou.setForeground(Color.RED);
 		thankYou.setBackground(Color.WHITE);
-		thankYou.setBounds(22, 257, 367, 20);
+		thankYou.setBounds(22, 257, 437, 20);
 		frame.getContentPane().add(thankYou);
-		
 		
 		JButton btnSubmitOrder = new JButton("Submit Order");
 		btnSubmitOrder.addActionListener(new ActionListener() {
-			
 			
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				
@@ -227,13 +227,12 @@ public class orderForm {
 				String lName = txtLastName.getText();
 				
 				thankYou.setText("Thank you "+ fName +" " +lName +" your order is in queue ");
-	
-				
+		
 			}
 		});
 		btnSubmitOrder.setBounds(22, 296, 132, 23);
 		frame.getContentPane().add(btnSubmitOrder);
-		orderFilling.setBorder(new LineBorder(new Color(0, 0, 0)));
+		orderFilling.setForeground(Color.BLUE);
 		
 		
 		orderFilling.setBackground(Color.WHITE);
@@ -249,7 +248,10 @@ public class orderForm {
 		btnExit.setBounds(170, 296, 110, 23);
 		frame.getContentPane().add(btnExit);
 		
-		
+		JLabel lblOrderDetail = new JLabel("Order Detail :");
+		lblOrderDetail.setFont(new Font("Tahoma", Font.BOLD, 12));
+		lblOrderDetail.setBounds(22, 159, 94, 25);
+		frame.getContentPane().add(lblOrderDetail);
 		
 		RadioListener1 listener1 = new RadioListener1();
 		rdbtnChicken.addActionListener(listener1);
